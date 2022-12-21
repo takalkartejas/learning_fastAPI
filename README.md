@@ -49,11 +49,13 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
 </details>
 
 <details> <summary>
-3. user model and database
+3. user model, database and http get requests
    
 </summary>
 
    1. create models.py, this creates a structure to save user data
+   2. Add 2 users in main.py
+   3. add a funtion to display the user data at localhost:8000/users, check output in browser by refreashing it
 
 </details>
 
