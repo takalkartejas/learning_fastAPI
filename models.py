@@ -30,7 +30,7 @@ class User(BaseModel):
     identify information in computer systems.
     '''
     #if UUID is not provided use uuid4
-    id: Optional[UUID] = uuid4
+    id: Optional[UUID] = uuid4()
     first_name: str
     last_name: str
     #middle name is also an optional entry
