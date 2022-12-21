@@ -9,7 +9,11 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
 1. FastAPI is asyncronas similar to node.js and express
 2. Fast api is just a framework to build API, we need server to serve the API. For that uvicorn is used
 3. Uvicorn :- lighting fast ASGI(Asyncronas service gateway interface) server  
-4. 
+4. HTTP request methods:
+   HTTP defines a set of request methods to indicate the desired action to be performed for given resource. eg. of methods:- get, head 
+
+   https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+5. ASGI provide standard interface between async-capable Python web serves, frameworks and applications
 ---
 
 ## Learning steps:
@@ -33,7 +37,25 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
    4. change the pyhon file and just refresh the page and the changes are reflected
 
 </details>
-<details> 
+
+<details> <summary>
+2. HTTP Methods : refer theory 4
+   
+</summary>
+
+   1. You can do inspect in browser and check the in network the 'get' request
+   2. Async and await:- We use this keywords to await for somthing to happen asyncronasly. refer theory 5
+
+</details>
+
+<details> <summary>
+3. user model and database
+   
+</summary>
+
+   1. create models.py, this creates a structure to save user data
+
+</details>
 
 ---
 
