@@ -9,4 +9,4 @@ app = FastAPI()
 #define the method called root
 def root():
     #return this dictionary
-    return{"Hello": "World"}
+    return{"Hello": "Tejas"}
