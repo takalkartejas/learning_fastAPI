@@ -126,6 +126,16 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
    2. We modify main.py to raise an exception and then we delete same user twice in thunder client. Then we get the correct extention.
 </details>
 
+<details> <summary>
+10. Put
+   
+</summary>
+
+   1. We use put method to update the properties of existing user , eg. name, roles etc.
+   2. We create this method by chaning models.py and main.py. 
+   3. We test the method int thunder client by adding id like :- http://localhost:8000/users/[user id] and then adding the properties to be updated in the body.
+</details>
+
 ---
 
 ## Usefull commands:

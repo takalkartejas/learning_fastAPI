@@ -2,7 +2,7 @@ from typing import Optional, List
 from fastapi import FastAPI, HTTPException
 from uuid import uuid4, UUID
 #models is the file that we created and we import the classes in this program
-from models import User, Gender, Role
+from models import User, Gender, Role, UserUpdateRequest
 
 #create and instance of application
 app = FastAPI()
@@ -58,3 +58,26 @@ async def delete_user(user_id: UUID):
         status_code=404,
         detail =f"user with id: {user_id} does not exist"
     )
+
+# define put method to update properties of an existing user
+@app.put("/users/{user_id}")
+async def updateUserData(data: UserUpdateRequest, user_id: UUID):
+    for user in db:
+        if user.id == user_id:
+            #if client gives a particular data update that data
+            if data.first_name is not None:
+                user.first_name = data.first_name
+            if data.middle_name is not None:
+                user.middle_name = data.middle_name
+            if data.gender is not None:
+                user.gender = data.gender
+            if data.last_name is not None:
+                user.last_name = data.last_name
+            if data.roles is not None:
+                user.roles = data.roles
+            return user
+    #if user with the id is not present then exception
+    raise HTTPException(
+        status_code=404,
+        detail =f"user with id: {user_id} does not exist"
+    )    
