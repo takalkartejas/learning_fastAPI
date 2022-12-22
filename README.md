@@ -114,7 +114,7 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
 
    1. Add delete user funtion in main.py
    2. Check the new delete method available at http://localhost:8000/docs, use 'get' to get the data and copy the id of the user to be deleted and use delete method and paste the id of user.
-   3. We can also do this in thunder client
+   3. We can also do this in thunder client,we put this link http://localhost:8000/users/[user id] infront of delete
 </details>
 
 <details> <summary>
@@ -123,7 +123,7 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
 </summary>
 
    1. In last example if we delete all the users, and then still give the user id of one of the deleted users it will give status '200 ok' which is not ok. We wat to give '404 not found'.
-   2. 
+   2. We modify main.py to raise an exception and then we delete same user twice in thunder client. Then we get the correct extention.
 </details>
 
 ---
