@@ -79,6 +79,8 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
    2. We will need a client to test the post request
 </details>
 
+
+<details> <summary>
 6. Rest client
    
 </summary>
@@ -91,6 +93,18 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
    6. We then use the same get request as we did before and send, then we see that the new user was automatically added
    7. We can also see on browser that new user is added
    8. If we modify the main.py file then the server reloads and the new user that was added is gone
+</details>
+
+<details> <summary>
+7. Swaggger docs and redoc
+   
+</summary>
+
+   1. Type http://localhost:8000/docs on browser we get an interactive documentation.
+   2. We can check all the documentation of the API that we created here
+   3. We use the post request by using 'tryout' changing the example data and using 'execute'
+   4. Then we check the modified data using the get request. 
+   5. Type http://localhost:8000/docs on browser we get a non interactive documentation of redoc.
 </details>
 
 ---
