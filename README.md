@@ -13,7 +13,9 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
    HTTP defines a set of request methods to indicate the desired action to be performed for given resource. eg. of methods:- get, head 
 
    https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
-5. ASGI provide standard interface between async-capable Python web serves, frameworks and applications
+5. GET:- The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+6. POST:- The HEAD method asks for a response identical to a GET request, but without the response body. 
+7. ASGI provide standard interface between async-capable Python web serves, frameworks and applications
 ---
 
 ## Learning steps:
@@ -49,14 +51,46 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
 </details>
 
 <details> <summary>
-3. user model, database and http get requests
+3. user model, database 
    
 </summary>
 
-   1. create models.py, this creates a structure to save user data
-   2. Add 2 users in main.py
-   3. add a funtion to display the user data at localhost:8000/users, check output in browser by refreashing it
+   1. user model:- create models.py, this creates a structure to save user data
+   2. Database:- Add 2 users in main.py
 
+
+</details>
+
+<details> <summary>
+4. http get requests :- refer theory 5
+   
+</summary>
+
+   1. Add a funtion to display the user data at localhost:8000/users, check output in browser by refreashing it
+   2. If we refresh the browser the uuid changes every time,  We copy the uuid from browser and paste in id to avoid different uuid everytime
+</details>
+
+<details> <summary>
+5. http post requests :- refer theory 6
+   
+</summary>
+
+   1. We create a post request inside main.py to add additional user
+   2. We will need a client to test the post request
+</details>
+
+6. Rest client
+   
+</summary>
+
+   1. Install thunder client extension in vs code
+   2. Go to thuder client, click on new request, in get type http://localhost:8000/users, and we get the same json output as we got on browser
+   3. copy one of the user model objects from the output of get and then click on new client
+   4. In new client select post and got to body, in body select json, paste the object and edit the user properties like name etc. (delete the id part as it will be genrated automatically)
+   5. click on send, we get a the generated id in response, this id is retured in the post function in main.py
+   6. We then use the same get request as we did before and send, then we see that the new user was automatically added
+   7. We can also see on browser that new user is added
+   8. If we modify the main.py file then the server reloads and the new user that was added is gone
 </details>
 
 ---

@@ -38,3 +38,11 @@ async def root():
 @app.get("/users")
 async def fetch_users():
     return db
+
+# this method will be at same path as get
+@app.post("/users")
+async def register_user(user: User):
+    # we register new user in database
+    db.append(user)
+    #we send him id
+    return{"id": user.id}

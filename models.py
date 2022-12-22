@@ -29,7 +29,7 @@ class User(BaseModel):
     A universally unique identifier (UUID) is a 128-bit number used to 
     identify information in computer systems.
     '''
-    #if UUID is not provided use uuid4
+    #if UUID is not provided by client during post request generate new id using uuid4
     id: Optional[UUID] = uuid4()
     first_name: str
     last_name: str
