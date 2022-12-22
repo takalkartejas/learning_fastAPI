@@ -46,3 +46,10 @@ async def register_user(user: User):
     db.append(user)
     #we send him id
     return{"id": user.id}
+
+@app.delete("/users/{user_id}")
+async def delete_user(user_id: UUID):
+    for user in db:
+        if user.id == user_id:
+            db.remove(user)
+            return 

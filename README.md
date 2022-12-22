@@ -102,9 +102,28 @@ Video link - https://www.youtube.com/watch?v=GN6ICac3OXY&t=647s
 
    1. Type http://localhost:8000/docs on browser we get an interactive documentation.
    2. We can check all the documentation of the API that we created here
-   3. We use the post request by using 'tryout' changing the example data and using 'execute'
+   3. We use the post request by using 'tryout' changing the example data and using 'execute'. We see the curl command generated for post, we can copy it to terminal to get same output
    4. Then we check the modified data using the get request. 
    5. Type http://localhost:8000/docs on browser we get a non interactive documentation of redoc.
+</details>
+
+<details> <summary>
+8. HTTP Delete Requests
+   
+</summary>
+
+   1. Add delete user funtion in main.py
+   2. Check the new delete method available at http://localhost:8000/docs, use 'get' to get the data and copy the id of the user to be deleted and use delete method and paste the id of user.
+   3. We can also do this in thunder client
+</details>
+
+<details> <summary>
+9. Raising execeptions
+   
+</summary>
+
+   1. In last example if we delete all the users, and then still give the user id of one of the deleted users it will give status '200 ok' which is not ok. We wat to give '404 not found'.
+   2. 
 </details>
 
 ---
