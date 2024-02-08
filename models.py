@@ -36,7 +36,7 @@ class User(BaseModel):
     #middle name is also an optional entry
     middle_name: Optional[str]
     gender: Gender
-    roles: List[Role]
+    # roles: List[Role]
 
 # We declare a class for put request
 # everything is optional we can update any 1 ot multiple entries that we want
@@ -45,4 +45,4 @@ class UserUpdateRequest(BaseModel):
     last_name: Optional[str]
     middle_name: Optional[str]
     gender: Optional[Gender]
-    roles: Optional[List[Role]]
+    # roles: Optional[List[Role]]

@@ -3,9 +3,20 @@ from fastapi import FastAPI, HTTPException
 from uuid import uuid4, UUID
 #models is the file that we created and we import the classes in this program
 from models import User, Gender, Role, UserUpdateRequest
+from fastapi.middleware.cors import CORSMiddleware
 
 #create and instance of application
 app = FastAPI()
+
+# Allow all origins for simplicity, you can specify specific origins instead
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
+
 
 #create a list of users and add couple of users
 db: List[User] = [
@@ -15,7 +26,7 @@ db: List[User] = [
      first_name="Tejas",
      last_name="Takalkar",
      gender = Gender.male,
-     roles = [Role.student]
+    #  roles = [Role.student]
     ),
 
     User(
@@ -24,7 +35,7 @@ db: List[User] = [
      first_name="Alexa",
      last_name="Jones",
      gender = Gender.female,
-     roles = [Role.admin, Role.user]
+    #  roles = [Role.admin, Role.user]
     )    
 ]
 #This will give a route for a get request, "/" :- indicates we will see the data at localhost:8000/ i.e root
@@ -73,8 +84,8 @@ async def updateUserData(data: UserUpdateRequest, user_id: UUID):
                 user.gender = data.gender
             if data.last_name is not None:
                 user.last_name = data.last_name
-            if data.roles is not None:
-                user.roles = data.roles
+            # if data.roles is not None:
+                # user.roles = data.roles
             return user
     #if user with the id is not present then exception
     raise HTTPException(
